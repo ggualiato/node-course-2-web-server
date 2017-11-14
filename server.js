@@ -52,6 +52,14 @@ app.get('/about',(req, res) => {
   });
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'NodeJS',
+    someText: 'Portifolio Page',
+    moreText: 'NodeJS is awesome'
+  })
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Error Message Here'
